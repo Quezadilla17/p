@@ -15,14 +15,14 @@
             "response":{
                 "docs":[
                     {"id":"1",
-                    "nombre":"Captain America",
-                    "real":"Steve Rogers",
-                    "poderes":"Habilidades Sobrehumanas",
+                    "SCP":"SCP-999",
+                    "Clase":"Safe",
+                    "Contencion":"Ninguna",
                     "imagen":"999.png"},
                     {"id":"2",
-                    "nombre":"Iron Man",
-                    "real":"Tony Stark",
-                    "poderes":"Tiene feria",
+                    "SCP":"SCP-096",
+                    "Clase":"Euclid",
+                    "Contencion":"Debe estar cellado ES PELIGROSO",
                     "imagen":"096.png"},
                 ]
             }
@@ -32,9 +32,9 @@
         data.forEach((value,key) => {
             target.innerHTML+=`<div class="image-list">
             <img src="${value.imagen}" class="image-styles" />
-            <p class="image-nombre">${value.nombre}</p>
-            <p class="image-real">${value.real}</p>
-            <p class="image-poderes">${value.poderes}</p>
+            <p class="image-SCP">${value.SCP}</p>
+            <p class="image-Clase">${value.Clase}</p>
+            <p class="image-Contencion">${value.contencion}</p>
             </div>` 
         });
     </script>
