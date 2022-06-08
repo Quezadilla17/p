@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="S.C.P.css">
+  <title>Objetos en JS</title>
+</head>
+<body>
+    <h1>Otra manera de trabajar con JSON</h1>
+    <div id="target"></div>
+    <script>
+        let data ={
+            "response":{
+                "docs":[
+                    {"id":"1",
+                    "SCP":"SCP-999",
+                    "Clase":"Safe",
+                    "Contencion":"INOFENSIVO",
+                    "imagen":"999.png"},
+                    {"id":"2",
+                    "SCP":"SCP-131(A-B)",
+                    "Clase":"Safe",
+                    "Contencion":"ADORABLES",
+                    "imagen":"131.jpg"},                    
+                    {"id":"3",
+                    "SCP":"SCP-096",
+                    "Clase":"Euclid",
+                    "Contencion":"NUNCA MIRARLO",
+                    "imagen":"096.png"},
+                    {"id":"4",
+                    "SCP":"SCP-173",
+                    "Clase":"Euclid",
+                    "Contencion":"NUNCA PESTAÑEAR",
+                    "imagen":"173.png"},
+                    {"id":"5",
+                    "SCP":"SCP-035",
+                    "Clase":"Keter",
+                    "Contencion":"no debe salir UN GRAVE PELIGRO",
+                    "imagen":"035.png"},
+                    {"id":"6",
+                    "SCP":"SCP-682",
+                    "Clase":"Keter",
+                    "Contencion":"ES PELIGROSO Y AGRESIVO",
+                    "imagen":"682.png"},
+                ]
+            }
+        };
+        let target=document.querySelector('#target');
+        data=data.response.docs;
+        data.forEach((value,key) => {
+            target.innerHTML+=`<div class="image-list">
+            <img src="${value.imagen}" class="image-styles" />
+            <p class="image-SCP">${value.SCP}</p>
+            <p class="image-Clase">${value.Clase}</p>
+            <p class="image-Contencion">${value.Contencion}</p>
+            </div>` 
+        });
+    </script>
+</body>
+</html>
